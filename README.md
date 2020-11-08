@@ -1,9 +1,27 @@
 <!--
  * @Author: winezero
- * @ReAuthor: reber
+ * @reference: reber
  * @LastEditTime : 2020-11-08
  -->
 # Rportscan
+
+* 开发需求：
+
+  * 结合多种方式进行端口扫描，目前支持masscan、goscan、tcpscan、httpscan、nmapscan
+  
+  * 结合多种方式进行端口指纹识别，目前支持nmap、socket匹配
+  
+  * 其他需求慢慢看需求、大家可以提issues
+
+* 代码实现：
+
+  * 基于https://github.com/reber0/Rpscan修改，致谢reber0
+
+* 运行环境：
+
+  * windows-linux-python3.7-3.8
+  
+  * 已将所有的依赖包下载到本地，无需安装依赖
 
 ### 功能
 
@@ -24,6 +42,10 @@
   * nmap 扫描存活主机端口(-sS, 使用sudo)
 
 * 服务识别
+
+  * nmap nmap指纹识别
+  
+  * tcp socket指纹识别
 
 ### 安装必要模块
 * 安装 masscan [(Download)](https://github.com/robertdavidgraham/masscan)
