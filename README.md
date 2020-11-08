@@ -7,6 +7,8 @@
 
 * Author: winezero NovaSEC
 
+* Reference: reber
+
 * 开发需求：
 
   * 结合多种方式进行端口扫描，目前支持masscan、goscan、tcpscan、httpscan、nmapscan，支持并行扫描
