@@ -1,0 +1,7 @@
+#loguru 已本地化
+#requests 已本地化
+#python-nmap 已本地化
+#demjson 已本地化
+#IPy 已本地化
+#第三方工具：nmap需要加入环境变量，masscan，goscan在当前文件夹下
+#需要存在config.cfg

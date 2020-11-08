@@ -1,0 +1,2041 @@
+[*] Start scanPort port scan...
+{'1.1.1.1': [80, 25, 443, 110], '1.1.1.2': [80, 25, 443, 110], '1.1.1.3': [80, 25, 110], '1.1.1.4': [80, 25, 443, 110], '1.1.1.5': [25, 443, 110], '1.1.1.6': [80, 25, 443, 110], '1.1.1.7': [80, 25, 443, 110], '1.1.1.8': [80, 25, 443, 110], '8.8.8.1': [25, 110], '8.8.8.2': [25, 110], '8.8.8.3': [25, 110], '8.8.8.4': [25, 110], '8.8.8.5': [25, 110], '8.8.8.6': [25, 110], '8.8.8.7': [25, 110], '8.8.8.8': [25, 110]}
+[*] Start masscan port scan...
+{'1.1.1.6': [80, 443], '1.1.1.1': [80, 443], '1.1.1.5': [80, 443], '1.1.1.2': [80, 443], '1.1.1.4': [80, 443], '1.1.1.7': [80, 443], '1.1.1.3': [80, 443], '1.1.1.8': [80, 443]}
+[*] Start async tcp port scan...
+{'1.1.1.1': [80, 25, 443, 110], '1.1.1.2': [80, 25, 443, 110], '1.1.1.3': [80, 25, 443, 110], '1.1.1.4': [80, 25, 443, 110], '1.1.1.5': [80, 25, 443, 110], '1.1.1.6': [80, 25, 443, 110], '1.1.1.7': [80, 25, 443, 110], '1.1.1.8': [80, 25, 443, 110], '8.8.8.1': [25, 110], '8.8.8.2': [25, 110], '8.8.8.3': [25, 110], '8.8.8.4': [25, 110], '8.8.8.5': [25, 110], '8.8.8.6': [25, 110], '8.8.8.7': [25, 110], '8.8.8.8': [25, 110]}
+[*] Start http port detect...
+{'1.1.1.2': [80, 443], '1.1.1.8': [80, 443], '1.1.1.1': [80, 443], '1.1.1.4': [80, 443], '1.1.1.7': [80, 443], '1.1.1.5': [80, 443], '1.1.1.3': [80, 443], '1.1.1.6': [80, 443]}
+[*] Start nmap port scan...
+{'1.1.1.2': [80, 443], '1.1.1.4': [80, 443], '1.1.1.8': [80, 443], '1.1.1.6': [80, 443], '1.1.1.5': [80, 443], '1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan-dev/log/result_port.csv
+1.1.1.5,[80, 25, 443, 110]
+1.1.1.6,[80, 25, 443, 110]
+8.8.8.1,[80, 25, 443, 110]
+1.1.1.7,[80, 25, 443, 110]
+8.8.8.2,[80, 25, 443, 110]
+8.8.8.5,[80, 25, 443, 110]
+8.8.8.4,[80, 25, 443, 110]
+1.1.1.3,[80, 25, 443, 110]
+8.8.8.6,[80, 25, 443, 110]
+8.8.8.8,[80, 25, 443, 110]
+1.1.1.8,[80, 25, 443, 110]
+1.1.1.1,[80, 25, 443, 110]
+8.8.8.3,[80, 25, 443, 110]
+8.8.8.7,[80, 25, 443, 110]
+1.1.1.2,[80, 25, 443, 110]
+1.1.1.4,[80, 25, 443, 110]
+[*] Get the service of the port by tcp socket...
+[*] Get the service of the port by nmap -sV...
+nmap -p 80,25,443,110 -sV  '8.8.8.1'
+nmap -p 80,25,443,110 -sV  '8.8.8.2'
+nmap -p 80,25,443,110 -sV  '8.8.8.4'
+nmap -p 80,25,443,110 -sV  '8.8.8.6'
+nmap -p 80,25,443,110 -sV  '8.8.8.5'
+nmap -p 80,25,443,110 -sV  '8.8.8.3'
+nmap -p 80,25,443,110 -sV  '8.8.8.7'
+{'1.1.1.5': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:10 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 80, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '1.1.1.6': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:10 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:35:10 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d7327cd7aa379e2f61ab97e93eec6a8da1604810110; expires=Tue, 08-Dec-20 04:35:10 GMT; path=/; domain=.1.1.1.6; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647bc0d620000eef6caa83000000001\\r\\nSe'"}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '8.8.8.1': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.7': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:11 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:35:11 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d84af51a49c96e8d4544443e5173216e01604810111; expires=Tue, 08-Dec-20 04:35:11 GMT; path=/; domain=.1.1.1.7; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647bc11690000ead3b996d000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '8.8.8.2': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.5': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.4': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.3': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:12 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 302 Moved Temporarily\\r\\nDate: Sun, 08 Nov 2020 04:35:12 GMT\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nLocation: https://one.one.one.one/family/\\r\\ncf-request-id: 0647bc1589000004dbcb120000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eec96026a5204db-LAX\\r\\n\\r\\n0\\r\\n\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '8.8.8.6': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.8': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}], '1.1.1.8': [{'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:35:13 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d47ea37584066434da195d93ecf26115c1604810113; expires=Tue, 08-Dec-20 04:35:13 GMT; path=/; domain=.1.1.1.8; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647bc19f90000e7dd9c084000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 443, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 04:35:13 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 1541\\r\\nExpires: Sun, 08 Nov 2020 08:35:13 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0647bc1b3d00000517881d7000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eec960b9f3c0517-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:14 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '8.8.8.3': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.7': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.2': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:15 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '1.1.1.4': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:35:15 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan-dev/log/result_service.csv
+1.1.1.5,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.5,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.5,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.5,80,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.5,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.5,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.5,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.5,443,https,open,cloudflare,,nmap,"NULL"
+1.1.1.6,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.6,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.6,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.6,80,http,open,NULL,NULL,tcpscan,"b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:35:10 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d7327cd7aa379e2f61ab97e93eec6a8da1604810110; expires=Tue, 08-Dec-20 04:35:10 GMT; path=/; domain=.1.1.1.6; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647bc0d620000eef6caa83000000001\r\nSe'"
+1.1.1.6,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.6,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.6,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.6,443,https,open,cloudflare,,nmap,"NULL"
+8.8.8.1,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.1,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.7,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:11 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.7,80,http,open,NULL,NULL,tcpscan,"b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:35:11 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d84af51a49c96e8d4544443e5173216e01604810111; expires=Tue, 08-Dec-20 04:35:11 GMT; path=/; domain=.1.1.1.7; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647bc11690000ead3b996d000000001\r\nSe'"
+1.1.1.7,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.7,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.7,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.7,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.7,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.7,443,https,open,cloudflare,,nmap,"NULL"
+8.8.8.2,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.2,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.5,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.5,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.4,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.4,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.3,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:12 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.3,80,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 302 Moved Temporarily\r\nDate: Sun, 08 Nov 2020 04:35:12 GMT\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nLocation: https://one.one.one.one/family/\r\ncf-request-id: 0647bc1589000004dbcb120000000001\r\nServer: cloudflare\r\nCF-RAY: 5eec96026a5204db-LAX\r\n\r\n0\r\n\r\n'"
+1.1.1.3,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.3,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.3,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.3,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.3,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.3,443,http,open,Cloudflare http proxy,,nmap,"NULL"
+8.8.8.6,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.6,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.8,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.8,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.8,25,smtp,filtered,,,nmap,"NULL"
+8.8.8.8,80,http,filtered,,,nmap,"NULL"
+8.8.8.8,110,pop3,filtered,,,nmap,"NULL"
+8.8.8.8,443,https,filtered,,,nmap,"NULL"
+1.1.1.8,80,http,open,NULL,NULL,tcpscan,"b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:35:13 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d47ea37584066434da195d93ecf26115c1604810113; expires=Tue, 08-Dec-20 04:35:13 GMT; path=/; domain=.1.1.1.8; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647bc19f90000e7dd9c084000000001\r\nSe'"
+1.1.1.8,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.8,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.8,443,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.8,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.8,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.8,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.8,443,https,open,cloudflare,,nmap,"NULL"
+1.1.1.1,80,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 04:35:13 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 1541\r\nExpires: Sun, 08 Nov 2020 08:35:13 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0647bc1b3d00000517881d7000000001\r\nServer: cloudflare\r\nCF-RAY: 5eec960b9f3c0517-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:14 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.1,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.1,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.1,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.1,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.1,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.1,443,http,open,Cloudflare http proxy,,nmap,"NULL"
+8.8.8.3,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.3,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.7,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+8.8.8.7,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.2,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.2,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.2,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.2,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.2,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.2,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.2,443,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.4,443,https,open,NULL,NULL,tcpscan,"b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:35:15 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.4,25,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.4,110,unkonw,filtered,NULL,NULL,tcpscan,"timed out"
+1.1.1.4,25,smtp,filtered,,,nmap,"NULL"
+1.1.1.4,80,http,open,Cloudflare http proxy,,nmap,"NULL"
+1.1.1.4,110,pop3,filtered,,,nmap,"NULL"
+1.1.1.4,443,https,open,cloudflare,,nmap,"NULL"
+[*] Start scanPort port scan...
+{'1.1.1.1': [25, 443, 110], '1.1.1.2': [80, 25, 110], '1.1.1.3': [80, 25, 110], '1.1.1.4': [80, 25, 443, 110], '1.1.1.5': [25, 443, 110], '1.1.1.6': [80, 25, 443, 110], '1.1.1.7': [80, 25, 443, 110], '1.1.1.8': [80, 25, 443, 110], '8.8.8.1': [25, 110], '8.8.8.2': [25, 110], '8.8.8.3': [25, 110], '8.8.8.4': [25, 110], '8.8.8.5': [25, 110], '8.8.8.6': [25, 110], '8.8.8.7': [25, 110], '8.8.8.8': [25, 110]}
+[*] Start masscan port scan...
+{'1.1.1.4': [80, 443], '1.1.1.2': [80, 443], '1.1.1.5': [80, 443], '1.1.1.1': [80, 443], '1.1.1.6': [80, 443], '1.1.1.8': [80, 443], '1.1.1.7': [80, 443], '1.1.1.3': [80, 443]}
+[*] Start async tcp port scan...
+{'1.1.1.1': [80, 25, 443, 110], '1.1.1.2': [80, 25, 443, 110], '1.1.1.3': [80, 25, 443, 110], '1.1.1.4': [80, 25, 443, 110], '1.1.1.5': [80, 25, 443, 110], '1.1.1.6': [80, 25, 443, 110], '1.1.1.7': [80, 25, 443, 110], '1.1.1.8': [80, 25, 443, 110], '8.8.8.1': [25, 110], '8.8.8.2': [25, 110], '8.8.8.3': [25, 110], '8.8.8.4': [25, 110], '8.8.8.5': [25, 110], '8.8.8.6': [25, 110], '8.8.8.7': [25, 110], '8.8.8.8': [25, 110]}
+[*] Start http port detect...
+{'1.1.1.1': [80, 443], '1.1.1.6': [80, 443], '1.1.1.5': [80, 443], '1.1.1.4': [80, 443], '1.1.1.2': [80, 443], '1.1.1.7': [80, 443], '1.1.1.8': [80, 443], '1.1.1.3': [80, 443]}
+[*] Start nmap port scan...
+{'1.1.1.5': [80, 443], '1.1.1.2': [80, 443], '1.1.1.8': [80, 443], '1.1.1.7': [80, 443], '1.1.1.6': [80, 443], '1.1.1.3': [80, 443], '1.1.1.4': [80, 443], '1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan-dev/log/result_port.csv
+1.1.1.7,[80, 25, 443, 110]
+1.1.1.3,[80, 25, 443, 110]
+1.1.1.2,[80, 25, 443, 110]
+1.1.1.8,[80, 25, 443, 110]
+8.8.8.4,[80, 25, 443, 110]
+1.1.1.5,[80, 25, 443, 110]
+8.8.8.1,[80, 25, 443, 110]
+1.1.1.1,[80, 25, 443, 110]
+8.8.8.3,[80, 25, 443, 110]
+8.8.8.5,[80, 25, 443, 110]
+8.8.8.6,[80, 25, 443, 110]
+1.1.1.6,[80, 25, 443, 110]
+8.8.8.7,[80, 25, 443, 110]
+8.8.8.2,[80, 25, 443, 110]
+1.1.1.4,[80, 25, 443, 110]
+8.8.8.8,[80, 25, 443, 110]
+[*] Get the service of the port by tcp socket...
+[*] Get the service of the port by nmap -sV...
+nmap -p 80,25,443,110 -sV  '8.8.8.3'
+nmap -p 80,25,443,110 -sV  '8.8.8.4'
+nmap -p 80,25,443,110 -sV  '8.8.8.1'
+nmap -p 80,25,443,110 -sV  '8.8.8.5'
+nmap -p 80,25,443,110 -sV  '8.8.8.6'
+nmap -p 80,25,443,110 -sV  '8.8.8.2'
+nmap -p 80,25,443,110 -sV  '8.8.8.7'
+{'1.1.1.7': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d5a18de5657b3690e3264a5cada6ff8f31604810367; expires=Tue, 08-Dec-20 04:39:27 GMT; path=/; domain=.1.1.1.7; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647bff9fc000035f105a81000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '1.1.1.3': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 302 Moved Temporarily\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nLocation: https://one.one.one.one/family/\\r\\ncf-request-id: 0647bffa2c0000e7dd79070000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eec9c3d1f67e7dd-LAX\\r\\n\\r\\n0\\r\\n\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '1.1.1.2': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 302 Moved Temporarily\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nLocation: https://one.one.one.one/family/\\r\\ncf-request-id: 0647bffa060000364fd837b000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eec9c3cdced364f-LAX\\r\\n\\r\\n0\\r\\n\\r\\n'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '1.1.1.8': [{'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d20beedfb84b9d689d17979429c4b3b2d1604810367; expires=Tue, 08-Dec-20 04:39:27 GMT; path=/; domain=.1.1.1.8; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647bffb800000991d8900f000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:27 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '8.8.8.4': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.5': [{'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:39:28 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d3823084e6add0a9bd5f9740ecdb1da541604810368; expires=Tue, 08-Dec-20 04:39:28 GMT; path=/; domain=.1.1.1.5; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647bffde90000053833bd1000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:28 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '8.8.8.1': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 04:39:29 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 1797\\r\\nExpires: Sun, 08 Nov 2020 08:39:29 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0647c000b80000d372ae9f2000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eec9c478a69d372-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:29 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '8.8.8.3': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.5': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.6': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.6': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:30 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '8.8.8.7': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '8.8.8.2': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}], '1.1.1.4': [{'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 04:39:31 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d90123bfa1ad376c1663ae35077dadb601604810371; expires=Tue, 08-Dec-20 04:39:31 GMT; path=/; domain=.1.1.1.4; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647c00b530000364fd606e000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 04:39:32 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}], '8.8.8.8': [{'type': 'tcpscan', 'port': 25, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 110, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan-dev/log/result_service.csv
+1.1.1.7,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.7,80,http,open,tcpscan,"NULL","NULL","b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d5a18de5657b3690e3264a5cada6ff8f31604810367; expires=Tue, 08-Dec-20 04:39:27 GMT; path=/; domain=.1.1.1.7; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647bff9fc000035f105a81000000001\r\nSe'"
+1.1.1.7,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.7,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.7,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.7,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.7,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.7,443,https,open,nmap,"cloudflare","","NULL"
+1.1.1.3,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.3,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 302 Moved Temporarily\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nLocation: https://one.one.one.one/family/\r\ncf-request-id: 0647bffa2c0000e7dd79070000000001\r\nServer: cloudflare\r\nCF-RAY: 5eec9c3d1f67e7dd-LAX\r\n\r\n0\r\n\r\n'"
+1.1.1.3,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.3,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.3,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.3,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.3,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.3,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.2,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 302 Moved Temporarily\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nLocation: https://one.one.one.one/family/\r\ncf-request-id: 0647bffa060000364fd837b000000001\r\nServer: cloudflare\r\nCF-RAY: 5eec9c3cdced364f-LAX\r\n\r\n0\r\n\r\n'"
+1.1.1.2,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.2,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.2,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.2,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.2,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.2,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.2,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.8,80,http,open,tcpscan,"NULL","NULL","b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d20beedfb84b9d689d17979429c4b3b2d1604810367; expires=Tue, 08-Dec-20 04:39:27 GMT; path=/; domain=.1.1.1.8; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647bffb800000991d8900f000000001\r\nSe'"
+1.1.1.8,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:27 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.8,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.8,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.8,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.8,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.8,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.8,443,https,open,nmap,"cloudflare","","NULL"
+8.8.8.4,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.4,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.5,80,http,open,tcpscan,"NULL","NULL","b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:39:28 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d3823084e6add0a9bd5f9740ecdb1da541604810368; expires=Tue, 08-Dec-20 04:39:28 GMT; path=/; domain=.1.1.1.5; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647bffde90000053833bd1000000001\r\nSe'"
+1.1.1.5,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.5,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.5,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.5,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.5,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.5,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.5,443,https,open,nmap,"cloudflare","","NULL"
+8.8.8.1,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.1,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 04:39:29 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 1797\r\nExpires: Sun, 08 Nov 2020 08:39:29 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0647c000b80000d372ae9f2000000001\r\nServer: cloudflare\r\nCF-RAY: 5eec9c478a69d372-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.1,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:29 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.1,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.1,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.1,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.1,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+8.8.8.3,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.3,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.5,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.5,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.6,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.6,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.6,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:30 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.6,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.6,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.6,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.6,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.6,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.6,443,https,open,nmap,"cloudflare","","NULL"
+8.8.8.7,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.7,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.2,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.2,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.4,80,http,open,tcpscan,"NULL","NULL","b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 04:39:31 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d90123bfa1ad376c1663ae35077dadb601604810371; expires=Tue, 08-Dec-20 04:39:31 GMT; path=/; domain=.1.1.1.4; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647c00b530000364fd606e000000001\r\nSe'"
+1.1.1.4,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 04:39:32 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.4,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.4,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.4,25,smtp,filtered,nmap,"","","NULL"
+1.1.1.4,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.4,110,pop3,filtered,nmap,"","","NULL"
+1.1.1.4,443,https,open,nmap,"cloudflare","","NULL"
+8.8.8.8,25,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.8,110,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+8.8.8.8,25,smtp,filtered,nmap,"","","NULL"
+8.8.8.8,80,http,filtered,nmap,"","","NULL"
+8.8.8.8,110,pop3,filtered,nmap,"","","NULL"
+8.8.8.8,443,https,filtered,nmap,"","","NULL"
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+User aborted.
+[*] Start masscan port scan...
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+{'10.144.38.1': [8080], '10.144.38.2': [8000], '10.144.38.3': [8000], '10.144.38.5': [8000], '10.144.38.6': [8088, 8011, 8099], '10.144.38.7': [8000], '10.144.38.8': [8000], '10.144.38.9': [8000], '10.144.38.10': [8000], '10.144.38.11': [8000], '10.144.38.12': [8000], '10.144.38.14': [8000], '10.144.38.17': [8080], '10.144.38.18': [80, 8011, 8099], '10.144.38.20': [8080], '10.144.38.21': [8080], '10.144.38.22': [8080], '10.144.38.23': [8000], '10.144.38.24': [8000], '10.144.38.26': [8080], '10.144.38.28': [8000], '10.144.38.30': [8000], '10.144.38.31': [8099], '10.144.38.32': [8080], '10.144.38.33': [8080], '10.144.38.34': [8099], '10.144.38.35': [8000], '10.144.38.36': [8000], '10.144.38.37': [8088, 8011, 8099], '10.144.38.40': [8000], '10.144.38.42': [8000], '10.144.38.44': [8011, 8099], '10.144.38.45': [8080], '10.144.38.46': [8000], '10.144.38.48': [8000], '10.144.38.50': [8088, 8099], '10.144.38.51': [8011, 8099], '10.144.38.52': [8099], '10.144.38.53': [8000], '10.144.38.55': [8000], '10.144.38.56': [8080], '10.144.38.57': [8080], '10.144.38.58': [8000], '10.144.38.59': [8088, 8011, 8099], '10.144.38.60': [8011, 8099], '10.144.38.62': [8000], '10.144.38.64': [8011, 8099], '10.144.38.66': [8080], '10.144.38.67': [8088, 8011, 8099], '10.144.38.68': [8080], '10.144.38.70': [8000], '10.144.38.71': [8000], '10.144.38.73': [8088, 8011, 8099], '10.144.38.74': [8000], '10.144.38.75': [8080], '10.144.38.76': [8000], '10.144.38.77': [8000], '10.144.38.80': [8080], '10.144.38.82': [8080], '10.144.38.83': [8099], '10.144.38.84': [8088, 8011, 8099], '10.144.38.85': [8080], '10.144.38.86': [8011, 8099], '10.144.38.88': [8099], '10.144.38.90': [8080], '10.144.38.91': [80, 8011, 8099], '10.144.38.92': [80, 8011, 8099], '10.144.38.93': [8080], '10.144.38.94': [8000], '10.144.38.95': [8099], '10.144.38.97': [8000], '10.144.38.98': [8000], '10.144.38.99': [8000]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+10.144.38.18,[80, 8011, 8099]
+10.144.38.5,[80, 8011, 8099, 8000]
+10.144.38.73,[8000, 8099, 8011, 80, 8088]
+10.144.38.33,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.37,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.68,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.56,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.97,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.42,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.67,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.57,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.60,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.8,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.36,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.48,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.9,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.40,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.77,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.2,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.10,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.52,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.46,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.66,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.55,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.58,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.82,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.50,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.86,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.20,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.6,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.92,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.24,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.12,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.7,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.21,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.99,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.32,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.94,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.35,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.53,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.93,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.28,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.45,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.62,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.71,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.74,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.59,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.23,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.80,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.14,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.30,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.1,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.91,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.95,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.64,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.75,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.98,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.76,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.22,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.88,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.11,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.85,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.26,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.83,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.70,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.44,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.31,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.90,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.84,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.34,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.51,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.17,[8000, 8099, 8011, 80, 8080, 8088]
+10.144.38.3,[8000, 8099, 8011, 80, 8080, 8088]
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+[*] Start masscan port scan...
+没有扫描到端口
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+[*] Start async tcp port scan...
+[*] Start http port detect...
+[*] Start nmap port scan...
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+[*] Start async tcp port scan...
+[*] Start http port detect...
+[*] Start nmap port scan...
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+没有扫描到端口
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+没有扫描到端口
+[*] Start async tcp port scan...
+[*] Start http port detect...
+[*] Start nmap port scan...
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+open_port_dict_all==0 
+[*] Start masscan port scan...
+{'1.1.1.2': [80, 443], '1.1.1.4': [80, 443], '1.1.1.1': [80, 443]}
+[*] Start scanPort port scan...
+没有扫描到端口
+{'1.1.1.1': [80], '1.1.1.2': [80], '1.1.1.4': [80, 443]}
+[*] Start async tcp port scan...
+{'1.1.1.2': [80, 443], '1.1.1.1': [80, 443], '1.1.1.4': [80, 443]}
+[*] Start http port detect...
+{'1.1.1.4': [80, 443], '1.1.1.2': [80, 443], '1.1.1.1': [80, 443]}
+[*] Start nmap port scan...
+{'1.1.1.1': [80, 443], '1.1.1.4': [80, 443], '1.1.1.2': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+1.1.1.2,[80, 443]
+1.1.1.4,[80, 443]
+[*] Get the service of the port by tcp socket...
+[*] Get the service of the port by nmap -sV...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 05:47:03 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 80, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '1.1.1.2': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 302 Moved Temporarily\\r\\nDate: Sun, 08 Nov 2020 05:47:03 GMT\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nLocation: https://one.one.one.one/family/\\r\\ncf-request-id: 0647fddd5b00009989ed9c3000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eecff422a849989-LAX\\r\\n\\r\\n0\\r\\n\\r\\n'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 05:47:03 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}], '1.1.1.4': [{'type': 'tcpscan', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 403 Forbidden\\r\\nDate: Sun, 08 Nov 2020 05:47:03 GMT\\r\\nContent-Type: text/plain; charset=UTF-8\\r\\nContent-Length: 16\\r\\nConnection: close\\r\\nX-Frame-Options: SAMEORIGIN\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nSet-Cookie: __cfduid=d217efaa80e6c5ed8f9708b4d7cd053c41604814423; expires=Tue, 08-Dec-20 05:47:03 GMT; path=/; domain=.1.1.1.4; HttpOnly; SameSite=Lax\\r\\ncf-request-id: 0647fddeae000004dbdf970000000001\\r\\nSe'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 05:47:04 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'cloudflare', 'version': '', 'response': 'NULL'}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 05:47:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.1,80,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.1,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.1,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.2,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 302 Moved Temporarily\r\nDate: Sun, 08 Nov 2020 05:47:03 GMT\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nLocation: https://one.one.one.one/family/\r\ncf-request-id: 0647fddd5b00009989ed9c3000000001\r\nServer: cloudflare\r\nCF-RAY: 5eecff422a849989-LAX\r\n\r\n0\r\n\r\n'"
+1.1.1.2,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 05:47:03 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.2,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.2,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.4,80,http,open,tcpscan,"NULL","NULL","b'HTTP/1.1 403 Forbidden\r\nDate: Sun, 08 Nov 2020 05:47:03 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 16\r\nConnection: close\r\nX-Frame-Options: SAMEORIGIN\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nSet-Cookie: __cfduid=d217efaa80e6c5ed8f9708b4d7cd053c41604814423; expires=Tue, 08-Dec-20 05:47:03 GMT; path=/; domain=.1.1.1.4; HttpOnly; SameSite=Lax\r\ncf-request-id: 0647fddeae000004dbdf970000000001\r\nSe'"
+1.1.1.4,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 05:47:04 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.4,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.4,443,https,open,nmap,"cloudflare","","NULL"
+[*] Start masscan port scan...
+{'1.1.1.4': [80, 443], '1.1.1.2': [80, 443], '1.1.1.1': [80, 443]}
+[*] Start scanPort port scan...
+没有扫描到端口
+{'1.1.1.1': [80, 443], '1.1.1.2': [80, 443], '1.1.1.4': [80, 443]}
+[*] Start async tcp port scan...
+[*] Start masscan port scan...
+{'1.1.1.2': [80, 443], '1.1.1.1': [80, 443], '1.1.1.4': [80, 443]}
+[*] Start scanPort port scan...
+没有扫描到端口
+没有扫描到端口
+{'1.1.1.1': [80, 443], '1.1.1.4': [80]}
+[*] Start async tcp port scan...
+[*] Start masscan port scan...
+{'1.1.1.4': [80, 443], '1.1.1.1': [80, 443], '1.1.1.2': [80, 443]}
+[*] Start scanPort port scan...
+没有扫描到端口
+{'1.1.1.1': [80], '1.1.1.2': [80], '1.1.1.4': [80]}
+[*] Start async tcp port scan...
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+{'1.1.1.2': [80, 443], '1.1.1.4': [80, 443], '1.1.1.1': [80, 443]}
+[*] Start scanPort port scan...
+没有扫描到端口
+{'1.1.1.1': [80], '1.1.1.2': [80, 443], '1.1.1.4': [80, 443]}
+[*] Start async tcp port scan...
+[*] Start masscan port scan...
+{'1.1.1.4': [80, 443], '1.1.1.2': [80, 443]}
+[*] Start scanPort port scan...
+没有扫描到端口
+User aborted.
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+{'1.1.1.1': [80]}
+[*] Start scanPort port scan...
+{'1.1.1.1': [80, 443]}
+[*] Start async tcp port scan...
+{'1.1.1.1': [80, 443]}
+[*] Start http port detect...
+{'1.1.1.1': [80, 443]}
+[*] Start nmap port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+[*] Get the service of the port by nmap -sV...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 08:36:06 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 1592\\r\\nExpires: Sun, 08 Nov 2020 12:36:06 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 064898a4cf000036155a210000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eedf6e7a8f53615-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 08:36:07 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 08:36:06 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 1592\r\nExpires: Sun, 08 Nov 2020 12:36:06 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 064898a4cf000036155a210000000001\r\nServer: cloudflare\r\nCF-RAY: 5eedf6e7a8f53615-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 08:36:07 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.1,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.1,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+{'1.1.1.1': [443]}
+[*] Start scanPort port scan...
+{'1.1.1.1': [443]}
+[*] Start async tcp port scan...
+{'1.1.1.1': [80, 443]}
+[*] Start http port detect...
+{'1.1.1.1': [80, 443]}
+[*] Start nmap port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+[*] Get the service of the port by nmap -sV...
+nmap -p 80,443 -sV  '<?xml version="1.0" encoding="UTF-8"?>\r\n<!DOCTYPE nmaprun>\r\n<?xml-stylesheet href="file:///D:/ISEC/0X11_WEB-InfoColl/0X61_PortServiceScan/nmap/nmap.xsl" type="text/xsl"?>\r\n<!-- Nmap 7.91 scan initiated Sun Nov 08 16:38:44 2020 as: nmap -oX - -p 80,443 -sV 1.1.1.1 -->\r\n<nmaprun scanner="nmap" args="nmap -oX - -p 80,443 -sV 1.1.1.1" start="1604824724" startstr="Sun Nov 08 16:38:44 2020" version="7.91" xmloutputversion="1.05">\r\n<scaninfo type="syn" protocol="tcp" numservices="2" services="80,443"/>\r\n<verbose level="0"/>\r\n<debugging level="0"/>\r\n<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>\r\n<address addr="1.1.1.1" addrtype="ipv4"/>\r\n<hostnames>\r\n</hostnames>\r\n</hosthint>\r\n'
+User aborted.
+[*] Start masscan port scan...
+没有扫描到端口
+[*] Start scanPort port scan...
+没有扫描到端口
+[*] Start async tcp port scan...
+[*] Start masscan port scan...
+没有扫描到端口
+[*] Start scanPort port scan...
+没有扫描到端口
+[*] Start async tcp port scan...
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+[*] Start scanPort port scan...
+{'1.1.1.1': [80]}
+[*] Start async tcp port scan...
+{'1.1.1.1': [80, 443]}
+[*] Start http port detect...
+{'1.1.1.1': [80, 443]}
+[*] Start nmap port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+[*] Get the service of the port by nmap -sV...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 08:41:09 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 1895\\r\\nExpires: Sun, 08 Nov 2020 12:41:09 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 06489d42890000363c602be000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eedfe4a7b0a363c-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 08:41:10 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'nmap', 'port': 80, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 08:41:09 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 1895\r\nExpires: Sun, 08 Nov 2020 12:41:09 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 06489d42890000363c602be000000001\r\nServer: cloudflare\r\nCF-RAY: 5eedfe4a7b0a363c-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 08:41:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.1,80,http,open,nmap,"Cloudflare http proxy","","NULL"
+1.1.1.1,443,http,open,nmap,"Cloudflare http proxy","","NULL"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 08:46:31 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 2217\\r\\nExpires: Sun, 08 Nov 2020 12:46:31 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648a22af50000e7989c3d0000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee0624b86ce798-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 08:46:31 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 08:46:31 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 2217\r\nExpires: Sun, 08 Nov 2020 12:46:31 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648a22af50000e7989c3d0000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee0624b86ce798-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 08:46:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 08:47:11 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 2257\\r\\nExpires: Sun, 08 Nov 2020 12:47:11 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648a2c7dc0000eb2141011000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee071fc973eb21-LAX\\r\\n\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 08:47:11 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 2257\r\nExpires: Sun, 08 Nov 2020 12:47:11 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648a2c7dc0000eb2141011000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee071fc973eb21-LAX\r\n\r\n'"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 08:47:52 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 2298\\r\\nExpires: Sun, 08 Nov 2020 12:47:52 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648a36a40000004dbda3bb000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee08239d7304db-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 08:47:53 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 08:47:52 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 2298\r\nExpires: Sun, 08 Nov 2020 12:47:52 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648a36a40000004dbda3bb000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee08239d7304db-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 08:47:53 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 08:48:54 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 2360\\r\\nExpires: Sun, 08 Nov 2020 12:48:54 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648a4595f000078009e955000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee09a23d727800-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 08:48:54 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 08:48:54 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 2360\r\nExpires: Sun, 08 Nov 2020 12:48:54 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648a4595f000078009e955000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee09a23d727800-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 08:48:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+No such file or directory "cfg.cfg"
+No such file or directory "cfg.cfg"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 09:54:54 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 6320\\r\\nExpires: Sun, 08 Nov 2020 13:54:54 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648e0c6f30000eb4924b7f000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee6a518945eb49-LAX\\r\\n\\r\\n'"}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 09:54:54 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 09:54:54 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 6320\r\nExpires: Sun, 08 Nov 2020 13:54:54 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648e0c6f30000eb4924b7f000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee6a518945eb49-LAX\r\n\r\n'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 09:54:54 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+No such file or directory "cfg.cfg"
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+No such file or directory "cfg.cfg"
+[*] Start masscan port scan...
+[*] Start masscan port scan...
+No such file or directory "cfg.cfg"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 09:57:28 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 6474\\r\\nExpires: Sun, 08 Nov 2020 13:57:28 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648e320860000e4e28b2ea000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee6e140a8ce4e2-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 09:57:28 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 09:57:28 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 6474\r\nExpires: Sun, 08 Nov 2020 13:57:28 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648e320860000e4e28b2ea000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee6e140a8ce4e2-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 09:57:28 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 09:58:23 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 09:58:23 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+No such file or directory "D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan\libs/../config.cfg"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 443]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 80, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': 'b\'HTTP/1.1 301 Moved Permanently\\r\\nDate: Sun, 08 Nov 2020 09:58:36 GMT\\r\\nContent-Type: text/html\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nLocation: https://1.1.1.1/\\r\\nServed-In-Seconds: 0.000\\r\\nCF-Cache-Status: HIT\\r\\nAge: 6542\\r\\nExpires: Sun, 08 Nov 2020 13:58:36 GMT\\r\\nCache-Control: public, max-age=14400\\r\\ncf-request-id: 0648e42b980000eb4924179000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5eee6fbf59d6eb49-LAX\\r\\n\\r\\nba\\r\\n<html>\\r\\n<head><title>301 Moved Permanently</title></head>\\r\\n<body bgcolor="white">\\r\\n<center><h1>3\''}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 09:58:37 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,80,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 301 Moved Permanently\r\nDate: Sun, 08 Nov 2020 09:58:36 GMT\r\nContent-Type: text/html\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nLocation: https://1.1.1.1/\r\nServed-In-Seconds: 0.000\r\nCF-Cache-Status: HIT\r\nAge: 6542\r\nExpires: Sun, 08 Nov 2020 13:58:36 GMT\r\nCache-Control: public, max-age=14400\r\ncf-request-id: 0648e42b980000eb4924179000000001\r\nServer: cloudflare\r\nCF-RAY: 5eee6fbf59d6eb49-LAX\r\n\r\nba\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body bgcolor=white>\r\n<center><h1>3'"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 09:58:37 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+No such file or directory "C:\Users\WINEZERO\AppData\Local\Temp\_MEI144682\libs/../config.cfg"
+[*] Start masscan port scan...
+{'1.1.1.1': [80, 443, 853, 53]}
+ports result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_port.csv
+1.1.1.1,[80, 53, 443, 853]
+[*] Get the service of the port by tcp socket...
+{'1.1.1.1': [{'type': 'tcpscan', 'port': 53, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': 'timed out'}, {'type': 'tcpscan', 'port': 443, 'proto': 'https', 'state': 'open', 'product': 'NULL', 'version': 'NULL', 'response': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Sun, 08 Nov 2020 10:01:08 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'type': 'tcpscan', 'port': 853, 'proto': 'unkonw', 'state': 'filtered', 'product': 'NULL', 'version': 'NULL', 'response': '[WinError 10054] 远程主机强迫关闭了一个现有的连接。'}]}
+service result file : D:\ISEC\0X11_WEB-InfoColl\0X61_PortServiceScan\Rpscan/log/result_service.csv
+1.1.1.1,53,unkonw,filtered,tcpscan,"NULL","NULL","timed out"
+1.1.1.1,443,https,open,tcpscan,"NULL","NULL","b'HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Sun, 08 Nov 2020 10:01:08 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n'"
+1.1.1.1,853,unkonw,filtered,tcpscan,"NULL","NULL","[WinError 10054] 远程主机强迫关闭了一个现有的连接。"
