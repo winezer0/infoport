@@ -3,15 +3,17 @@
  * @reference: reber
  * @LastEditTime : 2020-11-08
  -->
-# Rportscan
+# Rportscan  NovaSEC
+
+* Author: winezero NovaSEC
 
 * 开发需求：
 
-  * 结合多种方式进行端口扫描，目前支持masscan、goscan、tcpscan、httpscan、nmapscan
+  * 结合多种方式进行端口扫描，目前支持masscan、goscan、tcpscan、httpscan、nmapscan，支持并行扫描
   
-  * 结合多种方式进行端口指纹识别，目前支持nmap、socket匹配
+  * 结合多种方式进行端口指纹识别，目前支持nmap、socket匹配，支持并行扫描
   
-  * 其他需求慢慢看需求、大家可以提issues
+  * 其他功能慢看需求、大家可以提issues
 
 * 代码实现：
 
@@ -22,6 +24,13 @@
   * windows-linux-python3.7-3.8
   
   * 已将所有的依赖包下载到本地，无需安装依赖
+
+* 缺陷bug：
+
+  * 本质上是一辆拼装车，扫描超多目标时可能会有外部调用的bug，所以部分模块我都限制了线程。
+
+  * 会一直迭代更新，使用方法请查看rpscan.py -h
+
 
 ### 功能
 
