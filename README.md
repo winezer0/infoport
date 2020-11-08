@@ -18,8 +18,10 @@
   * 其他功能慢看需求、大家可以提issues
 
 * 代码实现：
-
-  * 基于https://github.com/reber0/Rpscan修改，致谢reber0
+  * 基本组件基于 masscan、nmap
+  * 基本框架基于 https://github.com/reber0/Rpscan 修改，致谢reber0
+  * goscan 基于 https://github.com/xs25cn/scanPort 修改，致谢xs25cn
+  * tcp指纹识别模块基于 https://github.com/fanyingjie2/tcpscan 修改，致谢fanyingjie2
 
 * 运行环境：
 
