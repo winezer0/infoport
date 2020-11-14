@@ -178,8 +178,15 @@ common_port_300 = 21,22,23,25,53,69,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94
             logger.debug('Scan common_port_300')
             config.ports = sorted(config.pop("common_port_300").split(","))
         else:
-            config.ports = config.ports.replace(' ','')
+            config.ports = config.ports.replace(' ','') #去除端口之间的空格字符
             logger.debug('Scan {}'.format(config.ports))
+            #处理端口后端小于前端的问题
+            if '-' in config.ports:
+                port_start= int(config.ports.split("-")[0].strip())
+                port_end = int(config.ports.split("-")[1].strip())
+                if port_end < port_start:
+                    print('端口范围格式输入错误,后部范围小于前部范围!!!')
+                    exit()
         logger.debug('config.ports',config.ports)
     else:
         logger.debug('请输入端口号')

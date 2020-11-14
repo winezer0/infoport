@@ -52,6 +52,10 @@ def main():
         open_port_dict_tcpasyc=dict()
         open_port_dict_nmap=dict()
         
+        #增加all参数
+        if 'all' in config.scantype:
+            config.scantype = 't1,t2,t3,t4,t5'
+            #print(config.scantype )
         for scantype in config.scantype.split(','):
             scantype = scantype.strip()
             logger.debug('now scantype',scantype)
@@ -125,7 +129,7 @@ def main():
 ###########################
     print('*************************************************************************************')
 ###########################
-#端对应服务扫描
+#端口对应服务扫描
     if len(open_port_dict_all) > 0:
         #存储服务结果 #需要返回固定的字典格式
         #{'8.8.8.8': [{'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}], '1.1.1.1': [{'type': 'nmap', 'port': 25, 'proto': 'smtp', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 110, 'proto': 'pop3', 'state': 'filtered', 'product': '', 'version': '', 'response': 'NULL'}, {'type': 'nmap', 'port': 443, 'proto': 'http', 'state': 'open', 'product': 'Cloudflare http proxy', 'version': '', 'response': 'NULL'}]}
@@ -133,6 +137,9 @@ def main():
         port_service_list_nmap=dict()
         open_port_sevice_all=dict()
         if config.get_service:
+            #增加all参数
+            if 'all' in config.get_service:
+                config.get_service = 't1,t2'
             #循环获取指纹件
             for get_service in config.get_service.split(','):
                 get_service = get_service.strip()
@@ -166,7 +173,7 @@ def main():
                 if port_service_list_nmap.__contains__(ip):
                     open_port_sevice_all[ip].extend(port_service_list_nmap[ip])
                 #open_port_sevice_all[ip]=list(set(open_port_sevice_all[ip])) #TypeError: unhashable type: 'dict'
-            logger.info(open_port_sevice_all)
+            logger.debug(open_port_sevice_all)
             #定义结果输出文件
             #result_file_service="log/result_service_{}.txt".format(time.time())
             result_file_service="{}/log/result_service.csv".format(root_abspath)
@@ -195,7 +202,7 @@ def main():
             #写入结果文件完毕
             result_file_service_open.close()
     else:
-        logger.info('open_port_dict_all==0 ')
+        logger.error('open_port_dict_all==0 ')
 
 if __name__ == "__main__":
     main()

@@ -53,9 +53,9 @@ class ParserCmd(object):
         parser.add_argument("-p", dest="ports", type=str,
                             help="指定扫描端口, 支持分隔符[,-], 支持端口简写[t1(web-100),t2(常用-200),t3(常用-300),all(全端口)], 支持多种格式同时输入")
         parser.add_argument("-st", dest="scantype", type=str, default="masscan",
-                            help="端口扫描方法指定 (masscan(默认):t1(简写), goscan:t2 , tcpasyc:t3 , nmap:t4 , http:t5),支持同时指定多个扫描方式 ) ")
+                            help="端口扫描方法指定 (masscan(默认):t1(简写), goscan:t2 , tcpasyc:t3 , nmap:t4 , http:t5, t1-t5:all),支持同时指定多个扫描方式 ) ")
         parser.add_argument("-sv", dest="get_service", type=str, default="tcp",
-                            help="进行端口服务检测, 支持探测方法[tcp:t1, nmap:t2], 支持同时指定多个探测方式" )
+                            help="进行端口服务检测, 支持探测方法[tcp:t1, nmap:t2, t1-t2:all], 支持同时指定多个探测方式" )
         parser.add_argument("-ck", dest="is_check_live", default=False, action="store_true",
                             help="使用nmap探测主机是否存活, 默认False")
         parser.add_argument("-t", dest="thread_num", type=int, default=10,
@@ -64,6 +64,8 @@ class ParserCmd(object):
                             help="端口扫描速率, 默认1000, 部分模块暂不支持速率设置, 目前支持:tcpasyc,masscan")
         parser.add_argument("-v", dest="view", default=False, action="store_true",
                             help="显示调试信息,默认关闭")
+        parser.add_argument("-b", dest="batch", default=False, action="store_true",
+                            help="使用自动选项处理交互选项, 默认关闭, 目前交互选项: 端口扫描结果置空")
         # args = parser.parse_args()
         # parser.self.logger.debug_help()
 
@@ -123,6 +125,9 @@ class ParseTarget(object):
             prev  = target.rsplit('.', 4)[0]
             start = target.rsplit('-', 1)[0].rsplit('.',1)[1]
             end   = target.rsplit('-', 1)[1].rsplit('.',1)[1]
+            if int(end) < int(start):
+                print('IP范围前端大于后端,请重新输入!!!')
+                exit()
             for x in range(int(start), int(end)+1):
                 ip_list.append(prev+"."+str(x))
         elif m1:
@@ -133,6 +138,9 @@ class ParseTarget(object):
         elif m2:
             prev = target.rsplit('.', 1)[0]
             st, sp = target.split('.')[-1].split('-')
+            if int(sp) < int(st):
+                print('IP范围前端大于后端,请重新输入!!!')
+                exit()
             for x in range(int(st), int(sp)+1):
                 ip_list.append(prev+"."+str(x))
         elif m3:
@@ -149,7 +157,6 @@ class ParseTarget(object):
                 raise Exception(error_msg)
 
         return ip_list
-
 
 if __name__ == '__main__':
     pt = ParseTarget()

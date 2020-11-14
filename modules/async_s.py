@@ -20,6 +20,7 @@ class AsyncTcpScan(object):
         self.ports = config.ports
         self.rate = config.rate
         self.os_type = config.os_type
+        self.batch = config.batch
         
     def init_port(self):
         '''处理port输入'''
@@ -93,7 +94,8 @@ class AsyncTcpScan(object):
         self.init_port()
         #设置扫描线程
         if self.os_type == 'Windows':
-            self.rate = 500
+            if  self.rate >500:
+                self.rate = 500
         sem = asyncio.Semaphore(self.rate)  # 限制并发量
         
         #处理IP,端口列表
@@ -110,13 +112,53 @@ class AsyncTcpScan(object):
             tasks.append(task)
         loop = asyncio.get_event_loop()
         loop.run_until_complete(asyncio.wait(tasks))
-        
+
+
         #端口列表去重,过滤
         if len(self.open_list)>0:
+            #计算所有扫描端口数量
+            count_ports_all=0
+            if isinstance(self.ports,list):
+                count_ports_all = len(self.ports)
+            else:
+                if ( '-' in self.ports and  ',' in self.ports):
+                    portstrlist = self.ports.split(",")
+                    portlist=[]
+                    for postStr in portstrlist:
+                        if '-' in postStr:
+                            port_start= int(postStr.split("-")[0].strip())
+                            port_end = int(postStr.split("-")[1].strip())
+                            portlist.extend( [str(port) for port in range(port_start,port_end+1)])
+                        else:
+                            portlist.append(postStr)
+                    self.ports=list(set(portlist))
+                elif '-' in self.ports:
+                    port_start= int(self.ports.split("-")[0].strip())
+                    port_end = int(self.ports.split("-")[1].strip())
+                    portlist = [str(port) for port in range(port_start,port_end+1)]
+                    self.ports=list(set(portlist))
+                else :
+                    portlist = sorted(self.ports.split(","))
+                    self.ports=list(set(portlist))
+                count_ports_all = len(self.ports)
             for ip in self.open_list.keys():
+                #开放端口去重
                 self.open_list[ip]=list(set(self.open_list[ip]))
-                if  len(list(self.open_list[ip]))>200:
-                    self.logger.error("{} 常用端口开放 {} 个, 可能有拦截设备, 置空tcp_asyc_s模块端口扫描结果.".format(ip, len(self.open_list[ip])))
-                    self.open_list[ip]=[]
+                #通过比较IP对应的开放端口数量>=所有扫描self.ports数量来判断是否有拦截设备
+                #计算所有开放端口
+                count_ports_open = len(self.open_list[ip])
+                self.logger.debug('IP {} 本次扫描的所有端口 {} 个'.format( ip,count_ports_all ))
+                self.logger.debug('IP {} 本次扫描的所有开放端口 {} 个'.format(ip, count_ports_open ))
+                if  (count_ports_all >20) and (count_ports_open > count_ports_all*0.9) :
+                    formatStr = 'IP {} ,本次扫描端口共 {} 个,开放端口 {} 个, 开放率超过90%,可能有安全设备拦截, 置空tcp_asyc_s模块端口扫描结果'.format( ip, count_ports_all , count_ports_open ) 
+                    self.logger.info(formatStr)
+                    if self.batch :
+                        self.open_list[ip]=[]
+                    else:
+                        inputstr = input('即将置空扫描结果[确认Y|取消N]: ')
+                        if inputstr.lower() == 'n':
+                            pass
+                        else:
+                            self.open_list[ip]=[]
             self.logger.info(self.open_list)
         return self.open_list
