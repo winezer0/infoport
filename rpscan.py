@@ -32,8 +32,11 @@ def main():
     from modules.nmap_s import NmapScan
     from modules.http_s import HttpScan
     from modules.goscanport import goScanPort
+    
     from modules.get_service_nmap import NmapGetPortService
     from modules.get_service_tcp import TcpGetPortService
+    #端口扫描模块添加第1步修改
+    from modules.telnet_s import TelnetScan
     
     # 检测存活 ip
     if config.is_check_live:
@@ -51,11 +54,20 @@ def main():
         open_port_dict_goscan=dict()
         open_port_dict_tcpasyc=dict()
         open_port_dict_nmap=dict()
-        
+        #端口扫描模块添加第2步修改
+        open_port_dict_telnet=dict()
         #增加all参数
         if 'all' in config.scantype:
-            config.scantype = 't1,t2,t3,t4,t5'
-            #print(config.scantype )
+            #端口扫描模块添加第3步修改
+            config.scantype = 't1,t2,t3,t4,t5,t6'
+        #增加s1,s2,s3参数
+        if 's1' in config.scantype:
+            config.scantype = 't1,t2'
+        if 's2' in config.scantype:
+            config.scantype = 't1,t2,t3'
+        if 's3' in config.scantype:
+            config.scantype = 't1,t2,t3,t6'
+            
         for scantype in config.scantype.split(','):
             scantype = scantype.strip()
             logger.debug('now scantype',scantype)
@@ -78,11 +90,18 @@ def main():
                 n_scan = NmapScan(config)
                 #返回的端口号类型是数字
                 open_port_dict_nmap = n_scan.run()
+            elif ("telnet" in scantype) or ("t6" in scantype) :
+                #端口扫描模块添加第4步修改
+                t_scan = TelnetScan(config)
+                #返回的端口号类型是数字
+                open_port_dict_telnet = t_scan.run()
             else:
                 logger.debug(' [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]')
                 logger.debug(' [!! Scantype Input Error: {} !!!!!!!]'.format(scantype))
                 logger.debug(' [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]')
-                
+###########################
+        print('*************************************************************************************')
+###########################
     #所有扫描端口结果处理
         # {'1.1.1.1': [80, 25, 443, 110], '1.1.1.2': [80, 25, 443, 110], '1.1.1.3': [80, 25, 443, 110]}
         open_port_dict_all=dict()
@@ -93,13 +112,15 @@ def main():
         open_port_dict_all_keys.extend(open_port_dict_tcpasyc.keys())
         open_port_dict_all_keys.extend(open_port_dict_nmap.keys())
         open_port_dict_all_keys.extend(open_port_dict_http.keys())
+        #端口扫描模块添加第5步修改
+        open_port_dict_all_keys.extend(open_port_dict_telnet.keys())
+        
         open_port_dict_all_keys=list(set(open_port_dict_all_keys))
         logger.debug('此次扫描的所有开放IP',open_port_dict_all_keys)
+        #创建一个字典用于保存IP及器开放端口
         #fromkeys 方法只用来创建新字典，不负责保存
         open_port_dict_all = dict.fromkeys(open_port_dict_all_keys,[])
-        #logger.debug(open_port_dict_all)
         for ip in open_port_dict_all.keys():
-            #logger.debug( ip )
             if open_port_dict_masscan.__contains__(ip):
                 open_port_dict_all[ip].extend(open_port_dict_masscan[ip])
             if open_port_dict_goscan.__contains__(ip):
@@ -110,6 +131,9 @@ def main():
                 open_port_dict_all[ip].extend(open_port_dict_tcpasyc[ip])
             if open_port_dict_http.__contains__(ip):
                 open_port_dict_all[ip].extend(open_port_dict_http[ip])
+            #端口扫描模块添加第6步修改
+            if open_port_dict_telnet.__contains__(ip):
+                open_port_dict_all[ip].extend(open_port_dict_telnet[ip])
             open_port_dict_all[ip]=list(set(open_port_dict_all[ip]))
             logger.debug('open_port_dict_all : {}'.format(open_port_dict_all ))
         #定义最终结果输出文件
@@ -153,7 +177,6 @@ def main():
                 else:
                     logger.info(' [!! Get Service type Input Error: {} !!!!!!!]'.format(get_service))
 
-            #所有端口服务结果合并 处理 合并失败，存在bug列表合并bug  需要深拷贝绕过
             # {'1.1.1.2': [{'port': 25, 'state': 'filtered', 'name': 'smtp', 'product': '', 'version': ''}, {'port': 80, 'state': 'open', 'name': 'http', 'product': 'Cloudflare http proxy', 'version': ''}, {'port': 110, 'state': 'filtered', 'name': 'pop3', 'product': '', 'version': ''}, {'port': 443, 'state': 'open', 'name': 'http', 'product': 'Cloudflare http proxy', 'version': ''}], '1.1.1.1': [{'port': 25, 'state': 'filtered', 'name': 'smtp', 'product': '', 'version': ''}, {'port': 110, 'state': 'filtered', 'name': 'pop3', 'product': '', 'version': ''}, {'port': 443, 'state': 'open', 'name': 'http', 'product': 'Cloudflare http proxy', 'version': ''}]}
             # {'1.1.1.1': [{'port': 443, 'proto': 'https', 'payload': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Fri, 06 Nov 2020 18:30:49 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'port': 25, 'proto': 'unknow', 'payload': 'timed out'}, {'port': 110, 'proto': 'unknow', 'payload': 'timed out'}], '1.1.1.2': [{'port': 80, 'proto': 'https', 'payload': "b'HTTP/1.1 302 Moved Temporarily\\r\\nDate: Fri, 06 Nov 2020 18:30:50 GMT\\r\\nTransfer-Encoding: chunked\\r\\nConnection: keep-alive\\r\\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\\r\\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\\r\\nLocation: https://one.one.one.one/family/\\r\\ncf-request-id: 06406c692c000077e2f8848000000001\\r\\nServer: cloudflare\\r\\nCF-RAY: 5ee0e355187377e2-LAX\\r\\n\\r\\n0\\r\\n\\r\\n'"}, {'port': 443, 'proto': 'https', 'payload': "b'HTTP/1.1 400 Bad Request\\r\\nServer: cloudflare\\r\\nDate: Fri, 06 Nov 2020 18:30:50 GMT\\r\\nContent-Type: text/html\\r\\nContent-Length: 253\\r\\nConnection: close\\r\\nCF-RAY: -\\r\\n\\r\\n<html>\\r\\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\\r\\n<body>\\r\\n<center><h1>400 Bad Request</h1></center>\\r\\n<center>The plain HTTP request was sent to HTTPS port</center>\\r\\n<hr><center>cloudflare</center>\\r\\n</body>\\r\\n</html>\\r\\n'"}, {'port': 25, 'proto': 'unknow', 'payload': 'timed out'}, {'port': 110, 'proto': 'unknow', 'payload': 'timed out'}]}
             #结果是字典,不合并端口服务,只合并IP
