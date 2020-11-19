@@ -45,23 +45,23 @@ class ParserCmd(object):
         )
         parser.epilog = example.format(shell_name=parser.prog)
         parser.add_argument("-i", dest="target", type=str,
-                            help="扫描指定IP目标 : 1.1.1.1 or 1.1.1.1/24 or 1.1.1.1-255  or 1.1.1.1-1.1.1.254, 支持多种格式同时输入")
+                            help="指定IP目标 : 1.1.1.1 or 1.1.1.1/24 or 1.1.1.1-255  or 1.1.1.1-1.1.1.254, 支持多种格式同时输入")
         parser.add_argument("-iL", dest="target_filename", type=str,
-                            help="扫描指定IP文件, 对多个大目标的支持可能不完善,扫描大目标时建议使用masscan,goscan等外部程序")
+                            help="指定IP文件, 对多个大目标的支持可能不完善,扫描大目标时建议使用masscan,goscan等外部程序")
         parser.add_argument("-c", dest="config_file", type=str, default="{}/../config.cfg".format(root_abspath),
-                            help="扫描配置文件路径, example: /usr/local/etc/rpscan.cfg,文件不存在时会自动创建默认配置文件, 程序打包后运行时建议手动指定配置文件")
+                            help="指定配置文件, example: /usr/local/etc/rpscan.cfg,文件不存在时会自动创建默认配置文件, 程序打包后运行时建议手动指定配置文件")
         parser.add_argument("-p", dest="ports", type=str,
-                            help="指定扫描端口, 支持分隔符[,-], 支持端口简写[t1(web-100),t2(常用-200),t3(常用-300),all(全端口)], 支持多种格式同时输入")
+                            help="指定扫描端口, 支持端口分隔符[ , - ] , 支持多种格式同时输入 , 支持简写[ c1(web-100), c2(常用-200), c3(常用-300), all(所有端口)]")
         parser.add_argument("-st", dest="scantype", type=str, default="masscan",
-                            help="端口扫描方法指定 [ masscan(默认):t1(简写), goscan:t2 , tcpasyc:t3 , nmap:t4 , http:t5, all(简写t1-t5),s1(t1,t2),s2(t1,t2,t3),s3(t1,t2,t3,t6) ] ,支持同时指定多个扫描方式 ) ")
+                            help="指定端口扫描方法 [ masscan(默认):t1(简写), goscan:t2 , tcpasyc:t3, telnet:t4, nmap:t5 , http:t6, all(所有方式), c1(t1,t2),c2(t1,t2,t3),c3(t1,t2,t3,t4) ] ,支持同时指定多个扫描方式 ) ")
         parser.add_argument("-sv", dest="get_service", type=str,
-                            help="进行端口服务检测, 支持探测方法[tcp:t1, nmap:t2, t1-t2:all], 支持同时指定多个探测方式" )
+                            help="指定服务检测方法, 支持探测方法[tcp:t1, nmap:t2, all(所有方式)], 支持同时指定多个探测方式" )
         parser.add_argument("-ck", dest="is_check_live", default=False, action="store_true",
                             help="使用nmap探测主机是否存活, 默认False")
         parser.add_argument("-t", dest="thread_num", type=int, default=10,
-                            help="端口扫描线程, 默认10, 部分模块暂不支持线程设置,目前支持:nmap_s,nmap_service")
+                            help="端口扫描线程, 默认10, 部分模块暂不支持线程设置,目前支持:port_nmap,service_nmap")
         parser.add_argument("-r", dest="rate", type=int, default=1000,
-                            help="端口扫描速率, 默认1000, 部分模块暂不支持速率设置, 目前支持:tcpasyc,masscan")
+                            help="端口扫描速率, 默认1000, 部分模块暂不支持速率设置, 目前支持:port_tcpasyc,port_masscan")
         parser.add_argument("-v", dest="view", default=False, action="store_true",
                             help="显示调试信息,默认关闭")
         parser.add_argument("-b", dest="batch", default=False, action="store_true",
