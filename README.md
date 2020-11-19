@@ -15,6 +15,8 @@
 
 * 识别存活主机
 
+  * nmap 识别存活主机
+  
 * 端口扫描
 
   * goscanport 扫描存活主机端口
@@ -102,7 +104,7 @@ Examples:
   python3 infoport.py -i 192.168.1.1-192.168.1.255   -p 80,443,8080,8443 -st t1,t2,t3,t4,t5 -sv t1,t2
   python3 infoport.py -i 192.168.1.1-255  -st masscan,goscan,http.nmap,tcpasyc -sv tcp,nmap
   python3 infoport.py -iL target.txt  -p all -st masscan -r 3000 -ck  -st t1 -sv t1
-  输入参数简写规则请查看rpscan.py
+  输入参数简写规则请查看infoport.py
 ```
 
 ###########################################################
@@ -112,11 +114,11 @@ Examples:
 
   * 202001117
   
-1、修改扫描类型s1\s2\s3为c1、c2、c3。c表示常用。
-
-2、全端口开放超过50%时，提示是否清空模块扫描结果
-
-3、项目重命名为INFOPORT
+  修改扫描类型s1\s2\s3为c1、c2、c3。c表示常用。
+  
+  全端口开放超过50%时，提示是否清空模块扫描结果
+  
+  项目重命名为INFOPORT
 
   * 202001117
   
