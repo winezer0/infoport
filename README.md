@@ -75,35 +75,33 @@
 
 ### 参数
 ```
-➜  python3 rpscan.py -h                                              
-usage: rpscan.py [-h] [-i TARGET] [-iL TARGET_FILENAME] [-c CONFIG_FILE]
-                 [-p PORTS] [-st SCANTYPE] [-sv GET_SERVICE] [-ck]
-                 [-t THREAD_NUM] [-r RATE]
+➜  python3 infoport.py -i 1.1.1.1 -p c1 -st all -sv all -h
+usage: infoport.py [-h] [-i TARGET] [-iL TARGET_FILENAME] [-c CONFIG_FILE] [-p PORTS] [-st SCANTYPE] [-sv GET_SERVICE] [-ck]
+                   [-t THREAD_NUM] [-r RATE] [-v] [-b]
 
 optional arguments:
   -h, --help           show this help message and exit
-  -i TARGET            扫描指定IP目标 : 1.1.1.1 or 1.1.1.1/24 or 1.1.1.1-255 or
-                       1.1.1.1-1.1.1.254, 支持多种格式同时输入
-  -iL TARGET_FILENAME  扫描指定IP文件, 对多个大目标的支持可能不完善,扫描大目标时建议使用masscan,goscan等外部程序
-  -c CONFIG_FILE       扫描配置文件路径, example: /usr/local/etc/rpscan.cfg,
-                       文件不存在时会自动创建默认配置文件,
-                        程序打包后运行时建议手动指定配置文件
-  -p PORTS             指定扫描端口, 支持分隔符[,-],
-                       支持端口简写[t1(web-100),t2(常用-200),t3(常用-300),all(全端口)],
-                       支持多种格式同时输入
-  -st SCANTYPE         端口扫描方法指定 (masscan(默认):t1(简写), goscan:t2 , tcpasyc:t3 ,
-                       nmap:t4 , http:t5),支持同时指定多个扫描方式 )
-  -sv GET_SERVICE      进行端口服务检测, 支持探测方法[tcp:t1, nmap:t2], 支持同时指定多个探测方式
+  -i TARGET            指定IP目标 : 1.1.1.1 or 1.1.1.1/24 or 1.1.1.1-255 or 1.1.1.1-1.1.1.254, 支持多种格式同时输入
+  -iL TARGET_FILENAME  指定IP文件, 对多个大目标的支持可能不完善,扫描大目标时建议使用masscan,goscan等外部程序
+  -c CONFIG_FILE       指定配置文件, example: /usr/local/etc/rpscan.cfg,文件不存在时会自动创建默认配置文件, 程序打包后运行时建议手动指定配置
+文件
+  -p PORTS             指定扫描端口, 支持端口分隔符[ , - ] , 支持多种格式同时输入 , 支持简写[ c1(web-100), c2(常用-200), c3(常用-300), all(所
+有端口)]
+  -st SCANTYPE         指定端口扫描方法 [ masscan(默认):t1(简写), goscan:t2 , tcpasyc:t3, telnet:t4, nmap:t5 , http:t6, all(所有方式),
+                       c1(t1,t2),c2(t1,t2,t3),c3(t1,t2,t3,t4) ] ,支持同时指定多个扫描方式 )
+  -sv GET_SERVICE      指定服务检测方法, 支持探测方法[tcp:t1, nmap:t2, all(所有方式)], 支持同时指定多个探测方式
   -ck                  使用nmap探测主机是否存活, 默认False
-  -t THREAD_NUM        端口扫描线程, 默认10, 部分模块暂不支持线程设置,目前支持:nmap_s,nmap_service
-  -r RATE              端口扫描速率, 默认1000, 部分模块暂不支持速率设置, 目前支持:tcpasyc,masscan
+  -t THREAD_NUM        端口扫描线程, 默认10, 部分模块暂不支持线程设置,目前支持:port_nmap,service_nmap
+  -r RATE              端口扫描速率, 默认1000, 部分模块暂不支持速率设置, 目前支持:port_tcpasyc,port_masscan
   -v                   显示调试信息,默认关闭
+  -b                   使用自动选项处理交互选项, 默认关闭, 目前交互选项: 端口扫描结果置空
+
 Examples:
-  python3 rpscan.py -i 192.168.1.1/24 -p 1-66535 -ck 3 -st t1 -sv t1
-  python3 rpscan.py -i 192.168.1.1-255  -p t1 -st masscan,goscan,http.nmap,tcpasyc -sv tcp,nmap
-  python3 rpscan.py -i 192.168.1.1-192.168.1.255   -p 80,443,8080,8443 -st t1,t2,t3,t4,t5 -sv t1,t2
-  python3 rpscan.py -i 192.168.1.1-255  -st masscan,goscan,http.nmap,tcpasyc -sv tcp,nmap
-  python3 rpscan.py -iL target.txt  -p all -st masscan -r 3000 -ck  -st t1 -sv t1
+  python3 infoport.py -i 192.168.1.1/24 -p 1-66535 -ck 3 -st t1 -sv t1
+  python3 infoport.py -i 192.168.1.1-255  -p t1 -st masscan,goscan,http.nmap,tcpasyc -sv tcp,nmap
+  python3 infoport.py -i 192.168.1.1-192.168.1.255   -p 80,443,8080,8443 -st t1,t2,t3,t4,t5 -sv t1,t2
+  python3 infoport.py -i 192.168.1.1-255  -st masscan,goscan,http.nmap,tcpasyc -sv tcp,nmap
+  python3 infoport.py -iL target.txt  -p all -st masscan -r 3000 -ck  -st t1 -sv t1
   输入参数简写规则请查看rpscan.py
 ```
 
@@ -114,7 +112,7 @@ Examples:
 
   * 202001117
   
-1、修改s1\s2\s3为c1、c2、c3。c表示常用。
+1、修改扫描类型s1\s2\s3为c1、c2、c3。c表示常用。
 
 2、全端口开放超过50%时，提示是否清空模块扫描结果
 
@@ -177,17 +175,11 @@ alive测试 ping no ,arp no ,跳过ok,  nmap ok
 
 扫描IP格式验证
 
-参数输入 IP段1.1.1.1/28，IP范围1.1.1.1-1.1.1.2,1.1.1.1-2，多个IP  OK
+IP段1.1.1.1/28，IP范围1.1.1.1-1.1.1.2,1.1.1.1-2，多个IP  OK
 
-INFOPortrp -i 1.1.1.1/28 -p 25,110 -st goscan -s ok
+扫描端口格式验证 
 
-INFOPortrp -i 1.1.1.1-1.1.1.2 -p 25,110 -st goscan -s ok
-
-INFOPortrp -i 1.1.1.1,1.1.1.2 -p 25,110 -st goscan -s  ok 
-
-扫描端口格式验证
-
-端口输入 端口范围1-65535，多个端口25,110,80 ,综合格式25,110,80-100 ，快捷字段 all,t1,t2,t3 OK 
+端口范围1-65535，多个端口25,110,80 ,综合格式25,110,80-100 ，快捷字段 all,t1,t2,t3 OK 
 
 ###########################################################
 
