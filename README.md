@@ -67,7 +67,7 @@
     * 自带的有 mac(v1.0.4) 和 win(v1.0.6 免杀) 下编译好的 masscan，其它平台不能用的自行编译安装
 
 * 【可忽略】安装 goscanport 
- * 自带的有 linux和 win下编译好的 masscan，其它平台不能用的自行编译安装
+    * 自带的有 linux和 win下编译好的 goscanport，其它平台不能用的自行编译目录下的源码
  
 * 运行环境：
   * windows-linux-python3.7-3.8
