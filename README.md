@@ -52,29 +52,27 @@
   * goscan 基于 https://github.com/xs25cn/scanPort 修改，致谢xs25cn
   * tcp指纹识别模块基于 https://github.com/fanyingjie2/tcpscan 修改，致谢fanyingjie2
 
-* 运行环境：
-
-  * windows-linux-python3.7-3.8
-  
-  * 已将所有的依赖包下载到本地，无需安装依赖
-
 * 缺陷bug：
 
   * 本质上是一辆拼装车，扫描超多目标时可能会有外部调用的bug，所以部分模块我都限制了线程。
 
-  * 会一直迭代更新，使用方法请查看rpscan.py -h
-
-
+  * 会一直迭代更新，使用方法请查看help
 
 ### 安装必要模块
-* 安装 masscan [(Download)](https://github.com/robertdavidgraham/masscan)
-    * 自带的有 mac(v1.0.4) 和 win(v1.0.6 免杀) 下编译好的 masscan，其它平台不能用的自行编译安装
 
 * 安装 nmap 并加入环境变量 [(Download)](https://nmap.org/dist/?C=M&O=D)
     * 如果是 win 的话安装 winpcap [(Download)](https://www.winpcap.org/install/default.htm)
 
-* pip3 install -r requirements.txt
+* 【可忽略】安装 masscan [(Download)](https://github.com/robertdavidgraham/masscan)
+    * 自带的有 mac(v1.0.4) 和 win(v1.0.6 免杀) 下编译好的 masscan，其它平台不能用的自行编译安装
 
+* 【可忽略】安装 goscanport 
+ * 自带的有 linux和 win下编译好的 masscan，其它平台不能用的自行编译安装
+ 
+* 运行环境：
+  * windows-linux-python3.7-3.8
+  * 已将所有的依赖包下载到本地，无需安装依赖
+  
 ### 参数
 ```
 ➜  python3 infoport.py -i 1.1.1.1 -p c1 -st all -sv all -h
