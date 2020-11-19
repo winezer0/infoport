@@ -15,6 +15,8 @@
 
 * infoport 目前不适用于大量IP段扫描的情况，适合用于端口分析。 
 
+* infoport 可以使用pyinstaller 4.x版本直接进行单文件打包。 
+
 ### 功能
 
 * 解析目标 ip
