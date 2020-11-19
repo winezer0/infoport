@@ -35,7 +35,7 @@ class ParserCmd(object):
                           \r  python3 {shell_name} -i 192.168.1.1-192.168.1.255   -p 80,443,8080,8443 -st t1,t2,t3,t4,t5 -sv t1,t2
                           \r  python3 {shell_name} -i 192.168.1.1-255  -st masscan,goscan,http.nmap,tcpasyc -sv tcp,nmap
                           \r  python3 {shell_name} -iL target.txt  -p all -st masscan -r 3000 -ck  -st t1 -sv t1
-                          \r  输入参数简写规则请查看rpscan.py
+                          \r  输入参数简写规则请查看{shell_name}
                           """
 
         parser = argparse.ArgumentParser(
