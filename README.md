@@ -9,21 +9,33 @@
 
 * Reference: reber
 
-* infoport 是一个励志于成为超级端口扫描分析器的python3脚本，
+* infoport 开始时为了实现一个快速的portscan+nmap,最后励志成为超级端口扫描分析器的python脚本
 
 * infoport 励志于快速结合调用多种端口扫描方式，快速分析当前服务器应该使用哪种方式来进行端口扫描。 
 
 * infoport 目前不适用于大量IP段扫描的情况，适合用于端口分析。 
 
-* infoport 可以使用pyinstaller 4.x版本直接进行单文件打包。 
+* infoport 可以使用pyinstaller 4.x版本直接进行脚本打包。 
 * 
 # ToDO
-  1-修改默认的masscan为portscan
-  2-替换goportscan  portscan不支持扫描127.0.0.1
-  3-优化各种线程设置属性
-  4-设置各种模式下的默认参数
+  1-修改默认的masscan扫描端口为portscan扫描端口
+  
+
+  2-替换go portscan, portscan不支持扫描127.0.0.1
+  
+
+  3-优化各种线程设置的默认属性
+  
+
+  4-设置各种扫描模式下的默认参数
+  
+
   5-添加其他端口指纹识别工具-如kscan
-  6-设置可直接配置各种依赖执行文
+  
+
+  6-设置可直接配置各种依赖执行文件和命令
+  
+
 
 ### 功能
 
