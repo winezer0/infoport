@@ -16,6 +16,14 @@
 * infoport 目前不适用于大量IP段扫描的情况，适合用于端口分析。 
 
 * infoport 可以使用pyinstaller 4.x版本直接进行单文件打包。 
+* 
+# ToDO
+  1-修改默认的masscan为portscan
+  2-替换goportscan  portscan不支持扫描127.0.0.1
+  3-优化各种线程设置属性
+  4-设置各种模式下的默认参数
+  5-添加其他端口指纹识别工具-如kscan
+  6-设置可直接配置各种依赖执行文
 
 ### 功能
 
