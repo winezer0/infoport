@@ -23,11 +23,19 @@
 * 目前不适用于大量IP段扫描的情况，适合用于准确度需较高的端口分析。 
 * 可以使用pyinstaller 4.x版本直接进行脚本打包。 
 
-![help](https://user-images.githubusercontent.com/46115146/150317966-e66fc686-efe2-46d7-a19d-9710c6109275.png)
 
-![run](https://user-images.githubusercontent.com/46115146/150318363-22a78d4c-5ff8-436c-b880-7cca89b94488.png)
+![help](https://user-images.githubusercontent.com/46115146/150475963-224a086e-9183-421f-a808-6c7615364843.png)
+
+
+![run](https://user-images.githubusercontent.com/46115146/150475950-0e29a307-2068-4f2c-bee5-43ead36cc00e.png)
+
+
+![run-v](https://user-images.githubusercontent.com/46115146/150475939-d163e3a1-0702-4eae-9706-348a2cb9c9a3.png)
+
 
 ### 更新记录：
+
+* 20220121 修复一些参数和显示BUG
 
 * 20220120 重构整体结构
 
