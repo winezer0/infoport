@@ -42,7 +42,7 @@
 * 20220120 重构整体结构
 
 
-### 扫描二维码关注NovaSEC公众号，谢谢支持
+### NOVASEC团队公众号
 
 ![NOVASEC-二维码](https://user-images.githubusercontent.com/46115146/150318610-ad46b4bb-d98e-44c5-ac88-207654f1d3c6.jpg)
 
