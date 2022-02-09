@@ -1,6 +1,6 @@
 # INFOPORT  NOVASEC|酒零
 
-* 发现端口扫描不能少了nmap的指纹识别,但是namp扫描端口真的太慢了,所以打算实现一个Go语言快速的portscan+nmap,多次重构后选择了实现了多个端口扫描器与服务识别项目,并且都可以通过进行自定义命令配置
+* 发现端口扫描不能少了nmap的指纹识别,但是namp扫描端口真的太慢了,所以打算实现一个Go语言快速的portscan+nmap,多次重构后最终实现了多个端口扫描器与服务识别项目的组合,并且都可以通过进行自定义命令配置
 
 * 程序结构重构后逻辑已经十分简单明了,可以很轻易的拼接自己需要的扫描器。
 
@@ -9,11 +9,15 @@
 * 解析目标ip和端口
 * 识别存活主机
   * nmap
-* 端口扫描
+  * 跳过 
+
+* 端口扫描 任选
   * python asynctcp、telnet、http 
   * masscan、nmap 
   * 其他golang portscan及rust blackwater 
-* 服务识别
+
+
+* 服务识别 任选
   * nmap
   * python tcp socket
 
