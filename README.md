@@ -12,7 +12,7 @@
   * 跳过 
 
 * 端口扫描 任选
-  * python asynctcp、telnet、htt不建议使用()
+  * python asynctcp、telnet、http不建议
   * masscan、nmap 
   * 其他golang portscan及rust blackwater 
 
