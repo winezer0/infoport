@@ -28,6 +28,7 @@ from modules.port_scan_by_blackwater import port_scan_by_blackwater
 from modules.service_probe_by_nmap import service_probe_by_nmap
 from modules.service_probe_by_tcpscan import service_probe_by_tcpscan
 
+from libs.SimpleCoding import file_encoding
 
 def init():
     # 使用全局字典config保存配置文件中的属性,AttribDict()是修改原生的dict定制的属性字典
@@ -63,7 +64,7 @@ def init():
     # 读取配置文件,根据配置文件加入config字典
     if not file_is_exist(config_file_path): make_default_config(config_file_path)
     config_parser = ConfigParser()
-    config_parser.read(config_file_path)
+    config_parser.read(config_file_path, encoding=file_encoding(config_file_path))
 
     # 将配置文件中的参数批量加入config字典
     for section in config_parser.sections():
