@@ -1,1 +1,7 @@
+.git
+.idea
+.gitignore
+config.ini
 thirdparty
+log
+result
