@@ -366,8 +366,8 @@ def config_get_target(config):
                 target_list = file_get_content(config.target_filename)
                 tmp_target_list = pt.parse_ip_relaxed(target_list)
                 # config.logger.debug("[*]tmp_target_list: {}".format(','.join(tmp_target_list)))
-                config.all_alive_ip_host.extend(tmp_target_list)
-                config.logger.debug("[*] config.ip_host: {}".format(','.join(config.all_alive_ip_host)))
+                config.ip_host.extend(tmp_target_list)
+                config.logger.debug("[*] config.ip_host: {}".format(','.join(config.ip_host)))
             else:
                 config.logger.error('[-] No such file or directory "{host_file}" !!!'.format(host_file=destination_file))
                 sys.exit()
