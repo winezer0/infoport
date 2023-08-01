@@ -298,7 +298,7 @@ def open_ip_result_to_file(config):
     if len(config.all_open_ip_port) > 0:
         result_file_ip = config.BASE_DIR.joinpath('log/result_ip_{}.csv'.format(config.start_time))
         config.logger.info('[+] 所有模块开放主机结果存储路径: {}'.format(result_file_ip))
-        with open(result_file_ip, 'a+') as fp:
+        with open(result_file_ip, 'a+', encoding="utf-8") as fp:
             for ip in config.all_open_ip_port:
                 fp.write('{}'.format(ip) + '\n')
     else:
@@ -309,7 +309,7 @@ def port_result_to_file(config):
     if len(config.all_open_ip_port) > 0:
         result_file_port = config.BASE_DIR.joinpath('log/result_portscan_{}.csv'.format(config.start_time))
         config.logger.info('[+] 所有模块开放主机和端口结果存储路径: {}'.format(result_file_port))
-        with open(result_file_port, 'a+') as fp:
+        with open(result_file_port, 'a+', encoding="utf-8") as fp:
             for ip in config.all_open_ip_port.keys():
                 if len(config.all_open_ip_port[ip]):
                     fp.write('{},{}'.format(ip, ','.join(map(str, config.all_open_ip_port[ip]))) + '\n')
@@ -322,7 +322,7 @@ def service_result_to_file(config):
     if len(config.all_ip_port_service) > 0:
         result_file_service = config.BASE_DIR.joinpath('log/result_service_{}.csv'.format(config.start_time))
         config.logger.info('[+] 所有模块开放主机和端口服务识别结果存储路径: {}'.format(result_file_service))
-        with open(result_file_service, 'a+') as fp:
+        with open(result_file_service, 'a+', encoding="utf-8") as fp:
             # 获取IP对应的端口服务列表
             for ip in config.all_ip_port_service.keys():
                 if len(config.all_ip_port_service[ip]) > 0:
